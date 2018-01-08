@@ -19,13 +19,7 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              babelrc: true,
-              plugins: ['react-hot-loader/babel'],
-            },
-          },
+          'babel-loader',
           'ts-loader'
         ],
         exclude: /node_modules/
@@ -42,6 +36,6 @@ module.exports = {
     new HtmlWebpackPlugin()
   ],
   resolve: {
-    extensions: ['.tsx','.ts', '.js']
+    extensions: ['.tsx','.ts', '.js', '.jsx']
   }
 }
