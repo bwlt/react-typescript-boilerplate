@@ -1,0 +1,35 @@
+{
+  "name": "react-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "A starter for react with typescript",
+  "main": "index.js",
+  "scripts": {
+    "predev": "yarn",
+    "dev": "webpack-dev-server --open",
+    "build": "webpack",
+    "lint": "tslint --project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Walter Barbagallo <brb.walter@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-hot-loader": "^3.0.5",
+    "@types/webpack-env": "^1.13.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "html-webpack-plugin": "^2.30.1",
+    "ts-loader": "^3.2.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^4.0.0-beta.12"
+  }
+}
