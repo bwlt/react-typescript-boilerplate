@@ -26,10 +26,6 @@ module.exports = {
       }
     ]
   },
-  node: {
-    fs: 'empty',
-    tls: 'empty'
-  },
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
