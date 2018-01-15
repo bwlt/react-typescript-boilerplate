@@ -2,6 +2,7 @@ const path = require('path')
 
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 
 module.exports = {
@@ -20,7 +21,12 @@ module.exports = {
         test: /\.tsx?$/,
         use: [
           'babel-loader',
-          'ts-loader'
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true
+            }
+          }
         ],
         exclude: /node_modules/
       }
@@ -33,7 +39,10 @@ module.exports = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      workers: ForkTsCheckerWebpackPlugin.TWO_CPUS_FREE
+    })
   ],
   resolve: {
     extensions: ['.tsx','.ts', '.js', '.jsx']
