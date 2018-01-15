@@ -28,6 +28,7 @@ render(Root)
 
 if (module.hot) {
   module.hot.accept('./components/Root.tsx', () => {
-    render(Root)
+    const NextRoot = require('./components/Root.tsx').default
+    render(NextRoot)
   })
 }
